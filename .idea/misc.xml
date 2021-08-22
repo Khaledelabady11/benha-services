@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/font/chewy.xml" value="0.20885416666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_splach_screen.xml" value="0.190625" />
         <entry key="app/src/main/res/layout/recyclerdesign.xml" value="0.25" />
