@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">خدمات بنها</string>
+    <string name="ar_menu">عربي</string>
+    <string name="en_menu">انجليزي</string>
+    <string name="search_menu">البحث</string>
+    <string name="Medical">القسم الطبي</string>
+</resources>

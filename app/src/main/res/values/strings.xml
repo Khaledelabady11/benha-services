@@ -3,4 +3,5 @@
     <string name="ar_menu">Arabic</string>
     <string name="en_menu">English</string>
     <string name="search_menu">Search</string>
+    <string name="Medical">medical_dataMedical</string>
 </resources>
