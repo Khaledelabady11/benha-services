@@ -1,10 +1,15 @@
 package com.example.banha_services;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,5 +64,34 @@ RecyclerView recyclerView;
         recyclerView.setAdapter(adapter);
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.change_language,menu);
+        MenuItem item=menu.findItem(R.id.search);
+        SearchView searchView=(SearchView) item.getActionView();
+        searchView.setQueryHint("type here to search");
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
+        
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id=item.getItemId();
+        if (id==R.id.ar)
+            Toast.makeText(this,"Arabic ",Toast.LENGTH_LONG).show();
+        return super.onOptionsItemSelected(item);
     }
 }
