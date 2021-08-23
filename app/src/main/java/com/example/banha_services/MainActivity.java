@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -63,7 +66,6 @@ RecyclerView recyclerView;
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView.setAdapter(adapter);
 
-
     }
 
     @Override
@@ -94,4 +96,5 @@ RecyclerView recyclerView;
             Toast.makeText(this,"Arabic ",Toast.LENGTH_LONG).show();
         return super.onOptionsItemSelected(item);
     }
+
 }
