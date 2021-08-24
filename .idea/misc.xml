@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/button.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/clicked1.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.2140625" />
+        <entry key="app/src/main/res/drawable/recyclestyle.xml" value="0.371875" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_splach_screen.xml" value="0.190625" />
+        <entry key="app/src/main/res/layout/listitem.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/recyclerdesign.xml" value="0.25" />
       </map>
     </option>

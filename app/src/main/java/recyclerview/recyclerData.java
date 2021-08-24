@@ -1,4 +1,4 @@
-package com.example.banha_services;
+package recyclerview;
 
 public class recyclerData {
     private  String name;

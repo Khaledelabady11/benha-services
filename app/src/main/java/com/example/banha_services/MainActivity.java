@@ -14,6 +14,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import recyclerview.recyclerAdapter;
+import recyclerview.recyclerData;
+
 public class MainActivity extends AppCompatActivity {
 RecyclerView recyclerView;
     @Override
@@ -63,7 +66,6 @@ RecyclerView recyclerView;
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView.setAdapter(adapter);
 
-
     }
 
     @Override
@@ -94,4 +96,5 @@ RecyclerView recyclerView;
             Toast.makeText(this,"Arabic ",Toast.LENGTH_LONG).show();
         return super.onOptionsItemSelected(item);
     }
+
 }

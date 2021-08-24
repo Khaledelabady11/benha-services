@@ -1,6 +1,7 @@
-package com.example.banha_services;
+package recyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.banha_services.R;
+
 import java.util.List;
+
+import listview.Hosptal_activity;
 
 public class recyclerAdapter extends RecyclerView.Adapter <recyclerAdapter.recyclerHolder>{
 private List<recyclerData> data;
@@ -48,6 +53,13 @@ public class recyclerHolder extends RecyclerView.ViewHolder {
         recyclerData data1=data.get(position);
         holder.s1.setText(data1.getName());
         holder.img.setImageResource(data1.getImage());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, Hosptal_activity.class);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
