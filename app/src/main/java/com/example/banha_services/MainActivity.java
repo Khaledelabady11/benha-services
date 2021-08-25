@@ -1,7 +1,10 @@
 package com.example.banha_services;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,6 +16,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.SearchView;
 import android.widget.Toast;
+import android.widget.Toolbar;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,39 +27,44 @@ import recyclerview.recyclerAdapter;
 import recyclerview.recyclerData;
 
 public class MainActivity extends AppCompatActivity {
-RecyclerView recyclerView;
-Animation animSlideUp;
+    RecyclerView recyclerView;
+    Animation animSlideUp;
+    private DrawerLayout mDrawer;
+    private Toolbar toolbar;
+    private NavigationView nvDrawer;
+    private ActionBarDrawerToggle drawerToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        List<recyclerData> arrayList=new ArrayList<>();
-        recyclerData data2=new recyclerData();
+
+        List<recyclerData> arrayList = new ArrayList<>();
+        recyclerData data2 = new recyclerData();
         data2.setName("Medical");
         data2.setImage(R.drawable.medical);
-        recyclerData data3=new recyclerData();
+        recyclerData data3 = new recyclerData();
         data3.setName("medical");
         data3.setImage(R.drawable.medical);
-        recyclerData data4=new recyclerData();
+        recyclerData data4 = new recyclerData();
         data4.setName("Medical");
         data4.setImage(R.drawable.medical);
-        recyclerData data5=new recyclerData();
+        recyclerData data5 = new recyclerData();
         data5.setName("khaled");
         data5.setImage(R.drawable.medical);
-        recyclerData data6=new recyclerData();
+        recyclerData data6 = new recyclerData();
         data6.setName("khaled");
         data6.setImage(R.drawable.medical);
-        recyclerData data7=new recyclerData();
+        recyclerData data7 = new recyclerData();
         data7.setName("khaled");
         data7.setImage(R.drawable.medical);
-        recyclerData data8=new recyclerData();
+        recyclerData data8 = new recyclerData();
         data8.setName("khaled");
         data8.setImage(R.drawable.medical);
-        recyclerData data9=new recyclerData();
+        recyclerData data9 = new recyclerData();
         data9.setName("khaled");
         data9.setImage(R.drawable.medical);
-        recyclerData data10=new recyclerData();
+        recyclerData data10 = new recyclerData();
         data10.setName("khaled");
         data10.setImage(R.drawable.medical);
         arrayList.add(data2);
@@ -66,17 +77,24 @@ Animation animSlideUp;
         arrayList.add(data9);
         arrayList.add(data10);
 
-        recyclerView=findViewById(R.id.recyclerview);
-        recyclerAdapter adapter=new recyclerAdapter(arrayList,this);
-        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerView = findViewById(R.id.recyclerview);
+        recyclerAdapter adapter = new recyclerAdapter(arrayList, this);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(adapter);
-        animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.up);
+        animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.up);
         recyclerView.setVisibility(View.VISIBLE);
         recyclerView.startAnimation(animSlideUp);
 
+        // Set a Toolbar to replace the ActionBar.
+        toolbar=(Toolbar)findViewById(R.id.tool);
+        setActionBar(toolbar);
 
+        // This will display an Up icon (<-), we will replace it with hamburger later
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Find our drawer view
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.change_language,menu);
@@ -94,7 +112,7 @@ Animation animSlideUp;
                 return false;
             }
         });
-        
+
         return true;
     }
 
