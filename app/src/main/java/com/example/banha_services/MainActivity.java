@@ -23,6 +23,7 @@ import recyclerview.recyclerData;
 public class MainActivity extends AppCompatActivity {
 RecyclerView recyclerView;
 Animation animSlideUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,10 +70,9 @@ Animation animSlideUp;
         recyclerAdapter adapter=new recyclerAdapter(arrayList,this);
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView.setAdapter(adapter);
-
-                animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.up);
-                recyclerView.setVisibility(View.VISIBLE);
-                recyclerView.startAnimation(animSlideUp);
+        animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.up);
+        recyclerView.setVisibility(View.VISIBLE);
+        recyclerView.startAnimation(animSlideUp);
 
 
     }
