@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Banhaservices">
         <activity
+            android:name=".navigate"
+            android:exported="true"
+            android:label="@string/title_activity_navigate"
+            android:theme="@style/Theme.Banhaservices.NoActionBar" />
+        <activity
             android:name="listview.Hosptal_activity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".SplachScreen"
             android:exported="true">

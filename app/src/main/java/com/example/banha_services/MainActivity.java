@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -19,6 +22,7 @@ import recyclerview.recyclerData;
 
 public class MainActivity extends AppCompatActivity {
 RecyclerView recyclerView;
+Animation animSlideUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,10 +65,15 @@ RecyclerView recyclerView;
         arrayList.add(data9);
         arrayList.add(data10);
 
-        recyclerView=findViewById(R.id.recycler);
+        recyclerView=findViewById(R.id.recyclerview);
         recyclerAdapter adapter=new recyclerAdapter(arrayList,this);
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
         recyclerView.setAdapter(adapter);
+
+                animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.up);
+                recyclerView.setVisibility(View.VISIBLE);
+                recyclerView.startAnimation(animSlideUp);
+
 
     }
 

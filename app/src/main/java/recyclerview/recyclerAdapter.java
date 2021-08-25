@@ -27,9 +27,9 @@ public class recyclerHolder extends RecyclerView.ViewHolder {
     private CardView cardView;
     public recyclerHolder(@NonNull View itemView) {
         super(itemView);
-        s1=(TextView)itemView.findViewById(R.id.txt);
-        img=(ImageView)itemView.findViewById(R.id.img);
-        cardView=(CardView)itemView.findViewById(R.id.car);
+        s1=(TextView)itemView.findViewById(R.id.firstTxt);
+        img=(ImageView)itemView.findViewById(R.id.imageview);
+        cardView=(CardView)itemView.findViewById(R.id.card);
     }
 
 }
