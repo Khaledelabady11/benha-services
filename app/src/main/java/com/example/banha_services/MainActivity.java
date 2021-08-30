@@ -3,7 +3,6 @@ package com.example.banha_services;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -23,8 +22,8 @@ import com.google.android.material.navigation.NavigationView;
 import java.util.ArrayList;
 import java.util.List;
 
-import recyclerview.recyclerAdapter;
-import recyclerview.recyclerData;
+import category.categoryAdapter;
+import category.categoryData;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -39,32 +38,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<recyclerData> arrayList = new ArrayList<>();
-        recyclerData data2 = new recyclerData();
+        List<categoryData> arrayList = new ArrayList<>();
+        categoryData data2 = new categoryData();
         data2.setName("Medical");
         data2.setImage(R.drawable.medical);
-        recyclerData data3 = new recyclerData();
+        categoryData data3 = new categoryData();
         data3.setName("medical");
         data3.setImage(R.drawable.medical);
-        recyclerData data4 = new recyclerData();
+        categoryData data4 = new categoryData();
         data4.setName("Medical");
         data4.setImage(R.drawable.medical);
-        recyclerData data5 = new recyclerData();
+        categoryData data5 = new categoryData();
         data5.setName("khaled");
         data5.setImage(R.drawable.medical);
-        recyclerData data6 = new recyclerData();
+        categoryData data6 = new categoryData();
         data6.setName("khaled");
         data6.setImage(R.drawable.medical);
-        recyclerData data7 = new recyclerData();
+        categoryData data7 = new categoryData();
         data7.setName("khaled");
         data7.setImage(R.drawable.medical);
-        recyclerData data8 = new recyclerData();
+        categoryData data8 = new categoryData();
         data8.setName("khaled");
         data8.setImage(R.drawable.medical);
-        recyclerData data9 = new recyclerData();
+        categoryData data9 = new categoryData();
         data9.setName("khaled");
         data9.setImage(R.drawable.medical);
-        recyclerData data10 = new recyclerData();
+        categoryData data10 = new categoryData();
         data10.setName("khaled");
         data10.setImage(R.drawable.medical);
         arrayList.add(data2);
@@ -78,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(data10);
 
         recyclerView = findViewById(R.id.recyclerview);
-        recyclerAdapter adapter = new recyclerAdapter(arrayList, this);
+        categoryAdapter adapter = new categoryAdapter(arrayList, this);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerView.setAdapter(adapter);
         animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.up);
@@ -86,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.startAnimation(animSlideUp);
 
         // Set a Toolbar to replace the ActionBar.
-        toolbar=(Toolbar)findViewById(R.id.tool);
-        setActionBar(toolbar);
+
+
 
         // This will display an Up icon (<-), we will replace it with hamburger later
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

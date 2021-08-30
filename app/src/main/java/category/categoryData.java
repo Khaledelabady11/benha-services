@@ -1,6 +1,6 @@
-package recyclerview;
+package category;
 
-public class recyclerData {
+public class categoryData {
     private  String name;
     private int image;
 

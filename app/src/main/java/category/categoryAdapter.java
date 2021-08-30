@@ -1,4 +1,4 @@
-package recyclerview;
+package category;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,10 +16,10 @@ import com.example.banha_services.R;
 
 import java.util.List;
 
-import listview.Hosptal_activity;
+import element.ElementActivity;
 
-public class recyclerAdapter extends RecyclerView.Adapter <recyclerAdapter.recyclerHolder>{
-private List<recyclerData> data;
+public class categoryAdapter extends RecyclerView.Adapter <categoryAdapter.recyclerHolder>{
+private List<categoryData> data;
 private Context context;
 public class recyclerHolder extends RecyclerView.ViewHolder {
     private TextView s1;
@@ -34,7 +34,7 @@ public class recyclerHolder extends RecyclerView.ViewHolder {
 
 }
 
-    public recyclerAdapter(List<recyclerData> data, Context context) {
+    public categoryAdapter(List<categoryData> data, Context context) {
         this.data = data;
         this.context = context;
     }
@@ -50,13 +50,13 @@ public class recyclerHolder extends RecyclerView.ViewHolder {
 
     @Override
     public void onBindViewHolder(@NonNull recyclerHolder holder, int position) {
-        recyclerData data1=data.get(position);
+        categoryData data1=data.get(position);
         holder.s1.setText(data1.getName());
         holder.img.setImageResource(data1.getImage());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, Hosptal_activity.class);
+                Intent intent=new Intent(context, ElementActivity.class);
                 context.startActivity(intent);
             }
         });
