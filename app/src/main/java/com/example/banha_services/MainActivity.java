@@ -1,12 +1,12 @@
 package com.example.banha_services;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,84 +15,67 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.SearchView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
-import com.google.android.material.navigation.NavigationView;
-
-import java.util.ArrayList;
 import java.util.List;
 
+import com.example.banha_services.API.ApiServices;
+import com.example.banha_services.API.categoryitem;
 import category.categoryAdapter;
-import category.categoryData;
+import element.ElementActivity;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     Animation animSlideUp;
     private DrawerLayout mDrawer;
-    private Toolbar toolbar;
-    private NavigationView nvDrawer;
-    private ActionBarDrawerToggle drawerToggle;
+   private List<categoryitem>Lists;
+//    categoryViewModel categoryViewModel;
+    private static final String Base_Url="https://banha-services.herokuapp.com/api/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        List<categoryData> arrayList = new ArrayList<>();
-        categoryData data2 = new categoryData();
-        data2.setName("Medical");
-        data2.setImage(R.drawable.medical);
-        categoryData data3 = new categoryData();
-        data3.setName("medical");
-        data3.setImage(R.drawable.medical);
-        categoryData data4 = new categoryData();
-        data4.setName("Medical");
-        data4.setImage(R.drawable.medical);
-        categoryData data5 = new categoryData();
-        data5.setName("khaled");
-        data5.setImage(R.drawable.medical);
-        categoryData data6 = new categoryData();
-        data6.setName("khaled");
-        data6.setImage(R.drawable.medical);
-        categoryData data7 = new categoryData();
-        data7.setName("khaled");
-        data7.setImage(R.drawable.medical);
-        categoryData data8 = new categoryData();
-        data8.setName("khaled");
-        data8.setImage(R.drawable.medical);
-        categoryData data9 = new categoryData();
-        data9.setName("khaled");
-        data9.setImage(R.drawable.medical);
-        categoryData data10 = new categoryData();
-        data10.setName("khaled");
-        data10.setImage(R.drawable.medical);
-        arrayList.add(data2);
-        arrayList.add(data3);
-        arrayList.add(data4);
-        arrayList.add(data5);
-        arrayList.add(data6);
-        arrayList.add(data7);
-        arrayList.add(data8);
-        arrayList.add(data9);
-        arrayList.add(data10);
+//     categoryViewModel= ViewModelProviders.of(this).get(com.example.banha_services.ui.categoryViewModel.class);
+//     categoryViewModel.getCategory();
 
         recyclerView = findViewById(R.id.recyclerview);
-        categoryAdapter adapter = new categoryAdapter(arrayList, this);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        recyclerView.setAdapter(adapter);
-        animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.up);
-        recyclerView.setVisibility(View.VISIBLE);
-        recyclerView.startAnimation(animSlideUp);
+        Retrofit retrofit=new Retrofit.Builder()
+                .baseUrl(Base_Url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        ApiServices apiServices=retrofit.create(ApiServices.class);
+        Call<List<categoryitem>>call=apiServices.getCategory();
+        call.enqueue(new Callback<List<categoryitem>>() {
+            @Override
+            public void onResponse(Call<List<categoryitem>> call, Response<List<categoryitem>> response) {
+                    Lists=response.body();
+                    categoryAdapter adapter=new categoryAdapter(Lists,MainActivity.this);
+                    recyclerView.setLayoutManager(new GridLayoutManager(MainActivity.this, 2));
+                    recyclerView.setAdapter(adapter);
+                    animSlideUp = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.up);
+                    recyclerView.setVisibility(View.VISIBLE);
+                    recyclerView.startAnimation(animSlideUp);
+            }
 
-        // Set a Toolbar to replace the ActionBar.
+            @Override
+            public void onFailure(Call<List<categoryitem>> call, Throwable t) {
+                Toast.makeText(MainActivity.this, "error", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
-
-        // This will display an Up icon (<-), we will replace it with hamburger later
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // Find our drawer view
-        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+    }
+    public void onListItemClick(int position){
+       int category_id=Lists.get(position).getId();
+        Intent intent=new Intent(this, ElementActivity.class);
+        intent.putExtra("category_id",category_id);
+        startActivity(intent);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

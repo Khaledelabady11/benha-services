@@ -16,8 +16,10 @@ import com.example.banha_services.R;
 
 import java.util.List;
 
+import Firms.Firmsitem;
+
 public class elementAdapter extends RecyclerView.Adapter <elementAdapter.elementHolder>{
-    private List<elementData> list;
+    private List<Firmsitem> list;
     private Context context;
     public class elementHolder extends RecyclerView.ViewHolder {
         private TextView name;
@@ -36,7 +38,7 @@ public class elementAdapter extends RecyclerView.Adapter <elementAdapter.element
 
     }
 
-    public elementAdapter(List<elementData> data, Context context) {
+    public elementAdapter(List<Firmsitem> data, Context context) {
         this.list = data;
         this.context = context;
     }
@@ -51,11 +53,11 @@ public class elementAdapter extends RecyclerView.Adapter <elementAdapter.element
 
     @Override
     public void onBindViewHolder(@NonNull elementHolder holder, int position) {
-        elementData data1=list.get(position);
-        holder.name.setText(data1.getName());
-        holder.desc.setText(data1.getDesc());
-        holder.address.setText(data1.getAddress());
-        holder.call_btn.setText(data1.getPhone_number());
+      holder.name.setText(list.get(position).getName());
+      holder.desc.setText(list.get(position).getDescribtion());
+      holder.address.setText(list.get(position).getAdress());
+      holder.call_btn.setText(list.get(position).getPhone_number());
+
 
         }
 
