@@ -10,9 +10,8 @@
 
     <item
         android:id="@+id/search"
-         app:showAsAction="ifRoom|collapseActionView"
+         app:showAsAction="always|collapseActionView"
         android:title="@string/search_menu"
         android:icon="@drawable/ic_baseline_search_24"
-        app:actionViewClass="android.widget.SearchView"></item>
-
+        app:actionViewClass="androidx.appcompat.widget.SearchView"></item>
 </menu>
