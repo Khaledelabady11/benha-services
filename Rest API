@@ -1,0 +1,38 @@
+[33m709c94d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m709c94d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m HEAD@{1}: pull: Fast-forward
+[33mdf58958[m HEAD@{2}: reset: moving to HEAD
+[33mdf58958[m HEAD@{3}: commit: Rest API
+[33m0011692[m HEAD@{4}: commit: element recycler
+[33md8c0b2f[m[33m ([m[1;31morigin/search[m[33m, [m[1;31morigin/forSearchItems[m[33m)[m HEAD@{5}: reset: moving to HEAD
+[33md8c0b2f[m[33m ([m[1;31morigin/search[m[33m, [m[1;31morigin/forSearchItems[m[33m)[m HEAD@{6}: commit: update
+[33m0cc84bf[m HEAD@{7}: checkout: moving from navigation to master
+[33m8469619[m[33m ([m[1;32morigin/master[m[33m, [m[1;32mnavigation[m[33m)[m HEAD@{8}: checkout: moving from navigation to navigation
+[33m8469619[m[33m ([m[1;32morigin/master[m[33m, [m[1;32mnavigation[m[33m)[m HEAD@{9}: checkout: moving from master to navigation
+[33m0cc84bf[m HEAD@{10}: checkout: moving from recyclerview to master
+[33m97ee839[m[33m ([m[1;31morigin/splach-screen[m[33m, [m[1;31morigin/recyclerview[m[33m, [m[1;32msplach-screen[m[33m, [m[1;32mrecyclerview[m[33m)[m HEAD@{11}: checkout: moving from master to recyclerview
+[33m0cc84bf[m HEAD@{12}: commit: navigation
+[33mcf2b483[m HEAD@{13}: commit: update
+[33mb4fdfe9[m HEAD@{14}: commit: design update &animation in recycler view
+[33m9f6645f[m HEAD@{15}: commit (merge): design update
+[33m95b260d[m HEAD@{16}: commit: some updates
+[33m96eac58[m HEAD@{17}: commit (merge): splach Animation
+[33mc75618a[m HEAD@{18}: commit: del
+[33m97ee839[m[33m ([m[1;31morigin/splach-screen[m[33m, [m[1;31morigin/recyclerview[m[33m, [m[1;32msplach-screen[m[33m, [m[1;32mrecyclerview[m[33m)[m HEAD@{19}: checkout: moving from splach-screen to master
+[33m97ee839[m[33m ([m[1;31morigin/splach-screen[m[33m, [m[1;31morigin/recyclerview[m[33m, [m[1;32msplach-screen[m[33m, [m[1;32mrecyclerview[m[33m)[m HEAD@{20}: pull origin recyclerview: Fast-forward
+[33mcbaadc2[m HEAD@{21}: checkout: moving from master to splach-screen
+[33m97ee839[m[33m ([m[1;31morigin/splach-screen[m[33m, [m[1;31morigin/recyclerview[m[33m, [m[1;32msplach-screen[m[33m, [m[1;32mrecyclerview[m[33m)[m HEAD@{22}: pull origin recyclerview: Fast-forward
+[33mcbaadc2[m HEAD@{23}: checkout: moving from recyclerview to master
+[33m97ee839[m[33m ([m[1;31morigin/splach-screen[m[33m, [m[1;31morigin/recyclerview[m[33m, [m[1;32msplach-screen[m[33m, [m[1;32mrecyclerview[m[33m)[m HEAD@{24}: commit (merge): recycler view &some changes in splach screen
+[33mf514270[m HEAD@{25}: checkout: moving from master to recyclerview
+[33mcbaadc2[m HEAD@{26}: merge splach-screen: Fast-forward
+[33m8469619[m[33m ([m[1;32morigin/master[m[33m, [m[1;32mnavigation[m[33m)[m HEAD@{27}: checkout: moving from splach-screen to master
+[33mcbaadc2[m HEAD@{28}: commit: splach update
+[33m2f05bc6[m HEAD@{29}: checkout: moving from recyclerview to splach-screen
+[33mf514270[m HEAD@{30}: commit: update
+[33m8469619[m[33m ([m[1;32morigin/master[m[33m, [m[1;32mnavigation[m[33m)[m HEAD@{31}: checkout: moving from splach-screen to recyclerview
+[33m2f05bc6[m HEAD@{32}: commit: create splach screen
+[33m8469619[m[33m ([m[1;32morigin/master[m[33m, [m[1;32mnavigation[m[33m)[m HEAD@{33}: checkout: moving from master to splach-screen
+[33m8469619[m[33m ([m[1;32morigin/master[m[33m, [m[1;32mnavigation[m[33m)[m HEAD@{34}: checkout: moving from 8469619ae1a06c5dcab74068a86b4913f9298606 to master
+[33m8469619[m[33m ([m[1;32morigin/master[m[33m, [m[1;32mnavigation[m[33m)[m HEAD@{35}: checkout: moving from master to origin/splach-screen
+[33m8469619[m[33m ([m[1;32morigin/master[m[33m, [m[1;32mnavigation[m[33m)[m HEAD@{36}: pull: Fast-forward
+[33m28108ec[m HEAD@{37}: commit (initial): first commit !
