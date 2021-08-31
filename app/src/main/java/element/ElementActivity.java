@@ -38,6 +38,7 @@ private  RecyclerView element;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_element);
         Intent intent=getIntent();

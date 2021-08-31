@@ -15,6 +15,7 @@ ImageView imgin;
 Animation animation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splach_screen);
         new Handler().postDelayed(new Runnable(){

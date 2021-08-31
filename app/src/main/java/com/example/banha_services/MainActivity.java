@@ -2,12 +2,13 @@ package com.example.banha_services;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,11 +39,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//     categoryViewModel= ViewModelProviders.of(this).get(com.example.banha_services.ui.categoryViewModel.class);
+///categoryViewModel= ViewModelProviders.of(this).get(com.example.banha_services.ui.categoryViewModel.class);
 //     categoryViewModel.getCategory();
-
         recyclerView = findViewById(R.id.recyclerview);
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(Base_Url)
@@ -99,9 +100,37 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+       // fot localization
         int id=item.getItemId();
         if (id==R.id.ar)
-            Toast.makeText(this,"Arabic ",Toast.LENGTH_LONG).show();
+        {
+            Toast.makeText(this, "Arabic ", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        else if(id==R.id.en)
+        {
+            Toast.makeText(this, "English ", Toast.LENGTH_LONG).show();
+            return true;
+        }
+        // for share button
+        else if(id==R.id.share)
+        {
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_SUBJECT,"Check Out This Application");
+            intent.putExtra(Intent.EXTRA_TEXT,"حط اللينك هنا يا عبادي يا اخويا ");
+            startActivity(intent.createChooser(intent,"Send items to"));
+            return true;
+        }
+        else if(id==R.id.contact)
+        {
+            Intent intent = new Intent (Intent.ACTION_VIEW , Uri.parse("mailto:" + "kmohamed9231@gmail.com"));
+            intent.putExtra(Intent.EXTRA_SUBJECT, "subject");
+            intent.putExtra(Intent.EXTRA_TEXT, "text");
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
