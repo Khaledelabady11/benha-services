@@ -15,7 +15,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.SearchView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -83,20 +82,19 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.change_language,menu);
         MenuItem item=menu.findItem(R.id.search);
-        SearchView searchView=(SearchView) item.getActionView();
+        androidx.appcompat.widget.SearchView searchView= (androidx.appcompat.widget.SearchView) item.getActionView();
         searchView.setQueryHint("type here to search");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public boolean onQueryTextSubmit(String s) {
+            public boolean onQueryTextSubmit(String query) {
                 return false;
             }
 
             @Override
-            public boolean onQueryTextChange(String s) {
+            public boolean onQueryTextChange(String newText) {
                 return false;
             }
         });
-
         return true;
     }
 

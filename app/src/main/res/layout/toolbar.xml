@@ -23,6 +23,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:gravity="start"
-        android:background="@drawable/ic_baseline_search_24"
-        ></Button>
+        android:background="@drawable/ic_baseline_list_24"
+        android:visibility="visible"
+        />
 </androidx.appcompat.widget.Toolbar>

@@ -3,31 +3,42 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/drawable/ic_baseline_list_24.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/font/chewy.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/activity_hosptal.xml" value="0.1983695652173913" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/activity_main.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/activity_splach_screen.xml" value="0.12409420289855072" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/app_bar_main.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/content_main.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/elementdesign.xml" value="0.1983695652173913" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/header.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/listitem.xml" value="0.21965579710144928" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/nav_header_main.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/recyclerdesign.xml" value="0.1334853090172239" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/layout/toolbar.xml" value="0.2" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/menu/activity_main_drawer.xml" value="0.14010416666666667" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/menu/change_language.xml" value="0.13645833333333332" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/menu/nav_items.xml" value="0.1515625" />
+        <entry key="..\:/Users/eslam/Downloads/benha-services/app/src/main/res/menu/navigate.xml" value="0.1515625" />
         <entry key="app/src/main/res/drawable/button.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/clicked1.xml" value="0.2140625" />
-        <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.2140625" />
         <entry key="app/src/main/res/drawable/recyclestyle.xml" value="0.371875" />
-        <entry key="app/src/main/res/layout/activity_hosptal.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/activity_navigate.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_splach_screen.xml" value="0.190625" />
-        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/app_bar_navigate.xml" value="0.14739583333333334" />
         <entry key="app/src/main/res/layout/content_navigate.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/layout/elementdesign.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/layout/header.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/listitem.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/layout/nav_header_navigate.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/recyclerdesign.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/toolbar.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/menu/change_language.xml" value="0.19791666666666666" />
-        <entry key="app/src/main/res/menu/nav_items.xml" value="0.14270833333333333" />
         <entry key="app/src/main/res/menu/navigate.xml" value="0.19791666666666666" />
       </map>
     </option>
