@@ -34,6 +34,7 @@ private  RecyclerView element;
 private List<Firmsitem> firmList = new ArrayList<>();
 @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_element);
 

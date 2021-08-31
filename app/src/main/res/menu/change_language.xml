@@ -9,10 +9,19 @@
         android:title="@string/en_menu"></item>
 
     <item
+        android:id="@+id/contact"
+        android:title="@string/contact"
+        android:icon="@drawable/ic_baseline_contact_support_24"
+        app:showAsAction="never"></item>
+    <item
         android:id="@+id/search"
          app:showAsAction="ifRoom|collapseActionView"
         android:title="@string/search_menu"
         android:icon="@drawable/ic_baseline_search_24"
         app:actionViewClass="android.widget.SearchView"></item>
-
+    <item
+        android:id="@+id/share"
+        android:title="@string/share"
+        android:icon="@drawable/ic_baseline_share_24"
+        app:showAsAction="always"></item>
 </menu>
