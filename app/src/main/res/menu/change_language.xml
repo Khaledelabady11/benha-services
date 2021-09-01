@@ -26,6 +26,5 @@
         android:icon="@drawable/ic_baseline_share_24"
         app:showAsAction="always"></item>
 
-        app:actionViewClass="androidx.appcompat.widget.SearchView"></item>
-
+<!--        app:actionViewClass="androidx.appcompat.widget.SearchView"></item>-->
 </menu>

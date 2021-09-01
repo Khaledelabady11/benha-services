@@ -27,8 +27,6 @@ public class categoryAdapter extends RecyclerView.Adapter <categoryAdapter.recyc
 private List<categoryitem> cat_list;
 private Context context;
 
-
-
     public class recyclerHolder extends RecyclerView.ViewHolder {
         private TextView s1;
         private ImageView img;
